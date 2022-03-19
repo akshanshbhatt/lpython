@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Generate C++ AST node definitions from an ASDL description.
 """
