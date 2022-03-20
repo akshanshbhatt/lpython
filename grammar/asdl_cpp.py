@@ -38,6 +38,8 @@ class ASDLVisitor(asdl.VisitorBase):
 
     def emit(self, line, level=0):
         indent = "    "*level
+        if isinstance(line, bytes):
+            line = line.decode('utf-8')
         self.stream.write(indent + line + "\n")
 
 
