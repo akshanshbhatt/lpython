@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Generate C++ AST node definitions from an ASDL description.
 """
@@ -470,7 +469,7 @@ class TreeVisitorVisitor(ASDLVisitor):
         self.emit(              '} else {', 3)
         self.emit(                  's.append("\\n"+indtd);', 4)
         self.emit(              '}', 3)
-        self.emit(              'last ? s.append("└-") : s.append("|-");', 3)
+        self.emit(              'last ? s.append("└-") : s.append("|-");'.encode('utf8'), 3)
         self.emit(          '}', 2)
         self.emit(          'last ? inc_indent() : inc_lindent();', 2)
         self.emit(          'attached, last = false;', 2)
